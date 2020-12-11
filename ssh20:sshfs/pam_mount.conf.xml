@@ -16,7 +16,7 @@
            user="*"
            path="sshfs#%(USER)@54.86.65.167:/home/%(USER)"
            mountpoint="~/%(USER)"
-           options="port=2022,nosuid,nodev,noatime,reconnect,nonempty,allow_other,default_permissions,password_stdin"
+           options="port=2022,nosuid,nodev,noatime,reconnect,allow_other,default_permissions,password_stdin"
            ssh="0" noroot="0" 
      />
 
