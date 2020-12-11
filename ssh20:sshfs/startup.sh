@@ -19,8 +19,5 @@ cp /opt/docker/known_hosts /root/.ssh/known_hosts
 /sbin/nscd
 /sbin/nslcd
 
-/usr/bin/ssh-keygen -A
-/sbin/sshd -D
-
-#/bin/bash
+/bin/bash
 
