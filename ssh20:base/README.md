@@ -17,7 +17,7 @@ ASIX M06-ASO Escola del treball de barcelona
 
 ```
 $ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d edtasixm06/ldap20:latest 
-$ docker run --rm --name ssh.edt.org  -h ssh.edt.org  --net 2hisix -p 2022:22 -it edtasixm06/ssh20:base
+$ docker run --rm --name ssh.edt.org  -h ssh.edt.org  --net 2hisix -p 2022:22 -d edtasixm06/ssh20:base
 ```
 
 Es pot engegar amb docker-compose:
