@@ -11,18 +11,13 @@ ASIX M06-ASO Escola del treball de barcelona
 
 ### Imatges:
 
-* **edtasixm06/ssh20:base** Host base amb el servei SSH engegat. El host està configurat 
+* **edtasixm06/ssh20:base** Host base amb el *servei SSH* engegat. El host està configurat 
   amb PAM per permetre usuaris locals (unix01, etc) i usuaris de LDAP (pere,...). Cal
   engegar el container conjuntament amb el servei LDAP.
 
-```
-$ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d edtasixm06/ldap20:latest 
-$ docker run --rm --name ssh.edt.org  -h ssh.edt.org  --net 2hisix -p 2022:22 -it edtasixm06/ssh20:base
-```
 
-Es pot engegar amb docker-compose:
-```
-$ docker-compose up -d
-$ docker compose down
-```
+* **edtasixm06/ssh20:sshfs** Host *client* que accedeix al servidor SSH. Aquest host client 
+  està configurat per muntar els homes dels usuaris via *sshfs* del servidor SSH. S'ha 
+  configurat *syste-auth* per uar *pam_mount* i configurat *pam_mount.conf.xml* per muntar
+  un recurs de xarxa al home dels usuaris via *SSHFS*. 
 

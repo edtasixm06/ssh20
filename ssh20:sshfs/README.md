@@ -11,9 +11,11 @@ ASIX M06-ASO Escola del treball de barcelona
 
 ### Imatges:
 
-* **edtasixm06/ssh20:sshfs** 
-
-
+* **edtasixm06/ssh20:sshfs**  Host *client* que accedeix al servidor SSH. Aquest host client
+  està configurat per muntar els homes dels usuaris via *sshfs* del servidor SSH. S'ha
+  configurat *syste-auth* per usar *pam_mount* i configurat *pam_mount.conf.xml* per muntar
+  un recurs de xarxa al home dels usuaris via *SSHFS*.
+ 
   Atenció, cal usar en el container --privileged per poder fer els muntatges nfs.
 
 ```
